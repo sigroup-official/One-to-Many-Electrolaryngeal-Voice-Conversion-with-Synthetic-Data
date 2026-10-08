@@ -42,8 +42,36 @@
             margin-bottom: 24px;
         }
 
+        .links {
+            text-align: center;
+            font-size: 1.1rem;
+            margin-bottom: 24px;
+        }
+
+        .links a {
+            color: #1a5fb4;
+            text-decoration: none;
+            margin: 0 8px;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+
         .abstract-section {
             margin: 40px 0 32px 0;
+        }
+
+        footer {
+            margin-top: 56px;
+            padding-top: 16px;
+            border-top: 1px solid #e0e0e0;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #1a5fb4;
         }
 
         .abstract-section h2 {
@@ -192,17 +220,20 @@
             One-to-many Electrolaryngeal Voice Conversion with Synthetic Data
         </header>
         <div class="authors">
-            <!-- <span>Bowen Wu</span><sup>1,2</sup>,
+            <span>Bowen Wu</span><sup>1,2</sup>,
             <span>Haruto Ueno</span><sup>1,3</sup>,
             <span>Carlos Toshinori Ishi</span><sup>1,2</sup>,
-            and <span>Chaoran Liu</span><sup>1,4</sup> -->
+            and <span>Chaoran Liu</span><sup>1,4</sup>
         </div>
         <div class="affiliations">
-            <!-- <div><sup>1</sup> Guardian Robot Project, RIKEN, Japan</div>
+            <div><sup>1</sup> Guardian Robot Project, RIKEN, Japan</div>
             <div><sup>2</sup> Hiroshi Ishiguro Laboratories, ATR, Japan</div>
             <div><sup>3</sup> Graduate School of Engineering Science, The University of Osaka, Japan</div>
             <div><sup>4</sup> National Institute of Informatics, Japan</div>
-            <div style="margin-top: 10px;">E-mail: bowen.wu@riken.jp</div> -->
+            <div style="margin-top: 10px;">E-mail: bowen.wu@atr.jp</div>
+        </div>
+        <div class="links">
+            <a href="https://github.com/sigroup-official/One-to-Many-Electrolaryngeal-Voice-Conversion-with-Synthetic-Data">[Code]</a>
         </div>
         <section class="abstract-section">
             <h2>Abstract</h2>
@@ -1080,5 +1111,13 @@
                 </tbody>
             </table>
         </section>
+        <footer>
+            <b>License.</b>
+            The code and checkpoints are released under
+            <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>;
+            commercial use is not permitted.
+            The target speech samples are from the
+            <a href="https://sites.google.com/site/shinnosuketakamichi/research-topics/jvs_corpus">JVS corpus</a>.
+        </footer>
     </main>
 </body>
