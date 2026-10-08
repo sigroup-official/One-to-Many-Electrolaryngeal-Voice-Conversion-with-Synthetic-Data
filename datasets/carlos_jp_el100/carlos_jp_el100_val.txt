@@ -1,0 +1,10 @@
+data/carlos_jp_el100/carlos_jp_el100_wav_preprocessed/093.wav|
+data/carlos_jp_el100/carlos_jp_el100_wav_preprocessed/049.wav|
+data/carlos_jp_el100/carlos_jp_el100_wav_preprocessed/020.wav|
+data/carlos_jp_el100/carlos_jp_el100_wav_preprocessed/005.wav|
+data/carlos_jp_el100/carlos_jp_el100_wav_preprocessed/075.wav|
+data/carlos_jp_el100/carlos_jp_el100_wav_preprocessed/063.wav|
+data/carlos_jp_el100/carlos_jp_el100_wav_preprocessed/013.wav|
+data/carlos_jp_el100/carlos_jp_el100_wav_preprocessed/041.wav|
+data/carlos_jp_el100/carlos_jp_el100_wav_preprocessed/011.wav|
+data/carlos_jp_el100/carlos_jp_el100_wav_preprocessed/036.wav|

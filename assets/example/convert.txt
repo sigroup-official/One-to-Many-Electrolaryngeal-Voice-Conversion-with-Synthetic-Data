@@ -1,0 +1,4 @@
+el011_to_jvs001|assets/example/el/011.wav|assets/example/reference/jvs001_VOICEACTRESS100_001.wav
+el011_to_jvs002|assets/example/el/011.wav|assets/example/reference/jvs002_VOICEACTRESS100_001.wav
+el036_to_jvs001|assets/example/el/036.wav|assets/example/reference/jvs001_VOICEACTRESS100_001.wav
+el036_to_jvs002|assets/example/el/036.wav|assets/example/reference/jvs002_VOICEACTRESS100_001.wav

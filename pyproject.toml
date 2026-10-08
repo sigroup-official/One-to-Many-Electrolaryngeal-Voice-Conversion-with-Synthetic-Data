@@ -1,0 +1,38 @@
+[project]
+name = "el2nl-vc"
+version = "0.1.0"
+description = "One-to-many electrolaryngeal voice conversion with synthetic data"
+readme = "README.md"
+requires-python = ">=3.10,<3.11"
+dependencies = [
+    "librosa==0.11.0",
+    "matplotlib==3.7.0",
+    "numpy<2.0.0",
+    "scikit-learn==1.7.2",
+    "scipy==1.15.3",
+    "setuptools<81",
+    "soundfile==0.13.1",
+    "tensorboard==2.20.0",
+    "torch==2.9",
+    "torchaudio==2.9.0",
+    "torchcodec==0.8.1",
+    "torchvision==0.24.0",
+    "tqdm==4.67.1",
+    "transformers==4.57.1",
+    # flat-F0 data and evaluation
+    "pyworld==0.3.4",
+    "pysptk==1.0.1",
+    "fastdtw==0.3.4",
+    "mel-cepstral-distance==0.0.4",
+    "evaluate==0.4.5",
+    "jiwer==4.0.0",
+    "resemblyzer==0.1.4",
+    "huggingface-hub==0.36.2",
+]
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
