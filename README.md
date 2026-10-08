@@ -2,6 +2,7 @@
 
 Bowen Wu, Haruto Ueno, Carlos Toshinori Ishi, Chaoran Liu
 
+[[Paper]](https://www.isca-archive.org/interspeech_2026/wu26l_interspeech.pdf)
 [[Demo page]](https://sigroup-official.github.io/One-to-Many-Electrolaryngeal-Voice-Conversion-with-Synthetic-Data/)
 
 Restoring natural (NL) speech from electrolarynx (EL) speech is crucial for EL users who have undergone laryngectomy.
@@ -274,4 +275,14 @@ and `src/whisper` is from [Whisper](https://github.com/openai/whisper) (MIT Lice
 
 ## Citation
 
-Coming soon.
+```bibtex
+@inproceedings{wu26l_interspeech,
+  title     = {{One-to-Many Electrolaryngeal Voice Conversion with Synthetic Data}},
+  author    = {Bowen Wu and Haruto Ueno and Carlos Toshinori Ishi and Chaoran Liu},
+  year      = {2026},
+  booktitle = {{Interspeech 2026}},
+  pages     = {6851--6855},
+  doi       = {10.21437/Interspeech.2026-2150},
+  issn      = {2958-1796},
+}
+```
