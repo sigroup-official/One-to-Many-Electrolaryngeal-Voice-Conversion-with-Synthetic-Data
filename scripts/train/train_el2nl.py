@@ -3,6 +3,9 @@
 The content encoder takes the SSL feature of the EL speech X{data.el_suffix}.wav and
 the model reconstructs the NL speech X.wav. Initialize by copying a pretrained
 G_*.pth / D_*.pth into logs/{model}/ before running (see README).
+As in the paper, only the content encoder (enc_p) and the flow are trained: the decoder,
+the posterior encoder and the speaker encoder are frozen, and the discriminator's
+learning rate is 0.
 """
 
 import os
@@ -129,6 +132,9 @@ def run(rank, n_gpus, hps):
         **hps.model,
     ).cuda(rank)
     net_d = MultiPeriodDiscriminator(hps.model.use_spectral_norm).cuda(rank)
+    # as in the paper: only enc_p and flow are trained
+    for frozen in (net_g.dec, net_g.enc_q, net_g.enc_spk):
+        frozen.requires_grad_(False)
 
     optim_g = optim.AdamW(
         net_g.parameters(),
@@ -157,6 +163,11 @@ def run(rank, n_gpus, hps):
     except:
         epoch_str = 1
         global_step = 0
+
+    # as in the paper: the discriminator is not frozen but its learning rate is 0 (after load_checkpoint, which
+    # restores the pretraining optimizer state and with it lr = 2e-4)
+    for group in optim_d.param_groups:
+        group["lr"] = group["initial_lr"] = 0.0
 
     scheduler_g = torch.optim.lr_scheduler.ExponentialLR(
         optim_g, gamma=hps.train.lr_decay, last_epoch=epoch_str - 2

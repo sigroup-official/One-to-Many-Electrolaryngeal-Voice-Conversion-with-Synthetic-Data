@@ -35,7 +35,7 @@ mkdir -p checkpoints/whisper
 wget -O checkpoints/whisper/large-v2.pt https://openaipublic.azureedge.net/main/whisper/models/81f7c96c852ee8fc832187b0132e569d6c3065a3252ed18e56effd0b6a73e524/large-v2.pt
 
 # EL2NL model (extracted to checkpoints/el2nl/)
-wget -O el2nl.tar.gz "https://www.dropbox.com/scl/fi/medxno6ev7o4l128gimwy/el2nl.tar.gz?rlkey=f05weu1ie5yru1z5hrhf4ss22&st=geoem401&dl=1"
+wget -O el2nl.tar.gz "https://www.dropbox.com/scl/fi/g0errsujrs24o4gvo8qn7/el2nl.tar.gz?rlkey=lat3gjj5r9tmca5pv1qhhbp69&st=4ynktacw&dl=1"
 tar -xzf el2nl.tar.gz
 
 # Convert the examples
@@ -107,8 +107,8 @@ Extract the archives at the repository root (e.g., `tar -xzf el2nl.tar.gz`):
 
 | Archive | Extracted to | Description |
 |---|---|---|
-| [el2nl.tar.gz](https://www.dropbox.com/scl/fi/medxno6ev7o4l128gimwy/el2nl.tar.gz?rlkey=f05weu1ie5yru1z5hrhf4ss22&st=geoem401&dl=0) (143 MB) | `checkpoints/el2nl/G_204765.pth` | EL2NL model, ours-10k (generator only). |
-| [el2nl_flat.tar.gz](https://www.dropbox.com/scl/fi/qjametivgu3jvnlkbez6v/el2nl_flat.tar.gz?rlkey=n5rrte9ewdr7nke6901omb5v8&st=z4k88xl3&dl=0) (143 MB) | `checkpoints/el2nl_flat/G_204765.pth` | EL2NL model, flat-F0 baseline (generator only). |
+| [el2nl.tar.gz](https://www.dropbox.com/scl/fi/g0errsujrs24o4gvo8qn7/el2nl.tar.gz?rlkey=lat3gjj5r9tmca5pv1qhhbp69&st=4ynktacw&dl=0) (143 MB) | `checkpoints/el2nl/G_204765.pth` | EL2NL model, ours-10k (generator only). |
+| [el2nl_flat.tar.gz](https://www.dropbox.com/scl/fi/k7dorrfkkzllfkrlqssms/el2nl_flat.tar.gz?rlkey=rqkje51w3q037jd2npyy9ywob&st=7uq4t1ni&dl=0) (143 MB) | `checkpoints/el2nl_flat/G_204765.pth` | EL2NL model, flat-F0 baseline (generator only). |
 
 Each directory also contains the `config.json` used for training.
 The NL2EL model (`checkpoints/nl2el/G_35000.pth`) is available upon request (bowen.wu@atr.jp).
@@ -150,11 +150,11 @@ Conversion samples a latent variable, so the metrics vary slightly between runs 
 | QVC | 7.150 | 0.332 | 0.431 | 0.563 | 0.893 |
 | QVC-mix | 9.017 | 0.716 | 0.088 | 0.682 | 0.591 |
 | flat-F0 | 6.885 | 0.337 | 0.548 | <u>0.373</u> | 0.916 |
-| flat-F0 *(this repo)* | 6.844 | 0.321 | 0.568 | 0.390 | 0.911 |
+| flat-F0 *(this repo)* | 6.860 | 0.320 | 0.561 | 0.383 | 0.914 |
 | ours-100 | <u>6.600</u> | 0.315 | 0.555 | 0.375 | 0.907 |
 | ours-1k | **6.587** | <u>0.311</u> | <u>0.571</u> | 0.381 | <u>0.917</u> |
 | ours-10k | 6.607 | **0.309** | **0.585** | **0.366** | **0.923** |
-| ours-10k *(this repo)* | 6.530 | 0.308 | 0.594 | 0.358 | 0.922 |
+| ours-10k *(this repo)* | 6.567 | 0.305 | 0.589 | 0.383 | 0.921 |
 
 F0 is in log-scale. R.: RMSE, C.: correlation, Sim.: voice similarity.
 Bold and underline mark the best and second best among the paper's results.
