@@ -270,6 +270,7 @@ and uses [Whisper](https://github.com/openai/whisper).
 ## License
 
 This repository, including the released checkpoints, is licensed under [CC BY-NC 4.0](LICENSE): commercial use is not permitted.
+For commercial use, please contact us (bowen.wu@atr.jp).
 `src/qvc` is based on [QuickVC](https://github.com/quickvc/QuickVC-VoiceConversion) (MIT License, `src/qvc/LICENSE`)
 and `src/whisper` is from [Whisper](https://github.com/openai/whisper) (MIT License, `src/whisper/LICENSE`).
 
